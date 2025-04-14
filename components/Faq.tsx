@@ -26,7 +26,7 @@ const Faq = () => {
         )}
       </div>
     ));
-  }, [openIndex]);
+  }, [openIndex, toggleFAQ]);
 
 
    
