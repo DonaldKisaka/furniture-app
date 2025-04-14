@@ -10,9 +10,9 @@ const Faq = () => {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index: number) => {
+  const toggleFAQ = React.useCallback((index: number) => {
     setOpenIndex(index === openIndex ? null : index);
-  }
+  }, [openIndex]);
 
   const renderFAQ = useMemo(() => {
     return faqData.map((item, index) => (
