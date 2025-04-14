@@ -20,6 +20,8 @@ const NavLinks = React.memo(() => (
   </nav>
 ));
 
+NavLinks.displayName = "NavLinks";
+
 const Nav = () => {
   return (
     <div className="flex flex-col flex-1">

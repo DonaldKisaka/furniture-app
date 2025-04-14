@@ -1,7 +1,7 @@
 "use client";
 
 import { faqData } from "@/constants";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo } from "react";
 import React from "react";
 
 
@@ -10,9 +10,9 @@ const Faq = () => {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = useCallback((index: number) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(index === openIndex ? null : index);
-  }, [openIndex]);
+  }
 
   const renderFAQ = useMemo(() => {
     return faqData.map((item, index) => (
